@@ -1,0 +1,43 @@
+﻿# Rime schema
+# encoding: utf-8
+
+schema:
+  schema_id: jawi
+  name: 爪夷文
+  version: "2013.02.13"
+  author: 
+    - 奶茶貓 <hk.laichar@gmail.com>
+  description: |
+    馬來西亞阿拉伯字母爪夷文（Jawi）。
+
+engine:
+  processors:
+    - ascii_composer
+    - punctuator       # 處理符號按鍵
+    - express_editor
+  segmentors:
+    - punct_segmentor   # 劃界，與前後方的其他編碼區分開
+  translators:
+    - punct_translator  # 轉換
+
+punctuator:
+  import_preset: default
+  half_shape: # arabic
+	"a" : "أ"
+	"s" : "ا"
+    ";" : ؛
+    "," : ،
+    ")" : (
+    "(" : )
+    "»" : "{"
+    "«" : "}"
+    ">" : "<"
+    "<" : ">"
+    "]" : "["
+    "[" : "]"
+    "?" : ؟
+    "." : .
+    "}" : "«"
+    "{" : "»"
+    " " : " "
+
